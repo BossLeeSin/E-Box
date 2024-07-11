@@ -1,2 +1,2 @@
-# cmd下载依赖库
-### pip install openpyxl
+# cmd输入以下命令下载安装依赖
+pip install openpyxl
