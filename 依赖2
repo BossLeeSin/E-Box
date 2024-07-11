@@ -1,0 +1,46 @@
+以下是安装 `openpyxl` 的步骤：
+
+### 安装 openpyxl
+
+1. 确保你的虚拟环境已经激活。如果还没有激活，请按照之前的步骤激活。
+
+2. 使用 `pip` 安装 `openpyxl`：
+    ```sh
+    pip install openpyxl
+    ```
+
+### 安装完成后，再次运行代码
+
+确保 `openpyxl` 安装成功后，再次运行你的 Python 脚本。如果一切正常，你应该不会再看到关于缺少 `openpyxl` 的错误。
+
+### 完整步骤示例：
+
+1. **激活虚拟环境**（如果还没有激活）：
+    ```sh
+    cd C:\Users\LeeSin\Desktop\XX\E-Box
+    .venv\Scripts\activate
+    ```
+
+2. **安装 openpyxl**：
+    ```sh
+    pip install openpyxl
+    ```
+
+3. **运行脚本**：
+    ```sh
+    python E-Box.py
+    ```
+
+### 检查 openpyxl 安装
+
+你可以通过以下命令来确认 `openpyxl` 是否安装成功：
+```sh
+pip show openpyxl
+```
+
+如果安装成功，你会看到 `openpyxl` 的版本信息和其他细节。
+
+### 其他提示
+
+- 确保你的文件路径和文件名是正确的，避免路径错误或文件不存在的情况。
+- 确保 Excel 文件没有损坏，并且能够被其他工具（如 Excel 软件）正常打开。
