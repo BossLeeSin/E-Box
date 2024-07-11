@@ -50,7 +50,7 @@ def display_results(data_frame):
 ##### # 主程序入口
 
 def main():
-    folder_path = r'C:/Users/Administrator/Desktop/E-Box'  # 替换成你的文件路径或文件夹路径
+    folder_path = r'C:/Users/Administrator/Desktop/B'  # 替换成你的文件路径或文件夹路径
 
     print(f"\nSearching for data in Excel files in folder: {folder_path}")
     
