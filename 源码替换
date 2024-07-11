@@ -1,0 +1,7 @@
+# 下方示例为源码替换项：更改成excel表格存储路径 或 多个excel表格存储的文件夹路径（下方 第5行 和 第7行 为2种不同情况的替换流程示例）
+# 1.xlsx为单一excel表格文件名
+# E-Box为存储多个excel表格的文件夹名
+
+r'C:/Users/Administrator/Desktop/1.xlsx'
+
+r'C:/Users/Administrator/Desktop/E-Box'
