@@ -1,2 +1,79 @@
-# cmd输入以下命令下载安装依赖
-pip install openpyxl
+安装依赖前，需要激活虚拟环境！！
+激活虚拟环境的步骤取决于你使用的操作系统。下面是 Windows 和 macOS/Linux 的激活步骤：
+
+### 在 Windows 上激活虚拟环境
+
+1. 打开命令提示符（cmd）或 PowerShell。
+
+2. 导航到包含虚拟环境的目录：
+    ```sh
+    cd C:\Users\LeeSin\Desktop\XX\E-Box
+    ```
+
+3. 激活虚拟环境：
+    ```sh
+    .venv\Scripts\activate
+    ```
+
+激活成功后，你会看到命令提示符前面有虚拟环境的名称，例如：
+```sh
+(.venv) C:\Users\LeeSin\Desktop\XX\E-Box>
+```
+
+### 在 macOS/Linux 上激活虚拟环境
+
+1. 打开终端。
+
+2. 导航到包含虚拟环境的目录：
+    ```sh
+    cd /Users/LeeSin/Desktop/XX/E-Box
+    ```
+
+3. 激活虚拟环境：
+    ```sh
+    source .venv/bin/activate
+    ```
+
+激活成功后，你会看到命令提示符前面有虚拟环境的名称，例如：
+```sh
+(.venv) user@machine:~/Desktop/XX/E-Box$
+```
+
+### 安装 pandas
+
+激活虚拟环境后，安装 `pandas`：
+```sh
+pip install pandas
+```
+
+### 运行 Python 脚本
+
+确保安装成功后，运行你的 Python 脚本：
+```sh
+python E-Box.py
+```
+
+### 检查 pandas 安装
+
+你可以通过以下命令来确认 `pandas` 是否安装成功：
+```sh
+pip show pandas
+```
+
+如果安装成功，你会看到 `pandas` 的版本信息和其他细节。
+
+### 如果没有虚拟环境
+
+如果你还没有创建虚拟环境，可以使用以下步骤创建：
+
+1. 导航到你的项目目录：
+    ```sh
+    cd C:\Users\LeeSin\Desktop\XX\E-Box
+    ```
+
+2. 创建虚拟环境：
+    ```sh
+    python -m venv .venv
+    ```
+
+然后按照上面的步骤激活并安装 `pandas`。
