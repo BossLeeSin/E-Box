@@ -1,0 +1,75 @@
+import pandas as pd
+import os
+
+##### # 读取Excel文件，并将所有数据都转换为字符串类型
+
+def read_excel(file_path):
+    try:
+        df = pd.read_excel(file_path, dtype=str)
+        return df
+    except FileNotFoundError:
+        print(f"Error: File '{file_path}' not found.")
+        return None
+    except Exception as e:
+        print(f"Error: Failed to read '{file_path}'. Error message: {str(e)}")
+        return None
+
+##### # 在文件夹中搜索关键字（完全匹配）
+
+def search_data_in_folder(folder_path, keyword):
+    try:
+        excel_files = [f for f in os.listdir(folder_path) if f.endswith('.xlsx')]
+        found_data = pd.DataFrame()
+
+        for file in excel_files:
+            file_path = os.path.join(folder_path, file)
+            df = read_excel(file_path)
+            if df is not None:
+                mask = df.apply(lambda x: x.astype(str) == keyword, axis=1).any(axis=1)
+                filtered_data = df[mask]
+                if not filtered_data.empty:
+                    found_data = pd.concat([found_data, filtered_data], ignore_index=True)
+    
+        if not found_data.empty:
+            display_results(found_data)
+        else:
+            print(f"No data found exactly matching '{keyword}' in any Excel files.")
+    except Exception as e:
+        print(f"Error during search: {str(e)}")
+
+##### # 显示搜索结果
+
+def display_results(data_frame):
+    for index, row in data_frame.iterrows():
+        print("\n---------------------------------")
+        for col, value in row.items():
+            if isinstance(value, str) and value.strip():  # 只显示非空字符串数据的字段和内容
+                print(f"{col}：{value}")
+        print("---------------------------------")
+
+##### # 主程序入口
+
+def main():
+    folder_path = r'C:/Users/Administrator/Desktop/E-Box'  # 替换成你的文件路径或文件夹路径
+
+    print(f"\nSearching for data in Excel files in folder: {folder_path}")
+    
+    while True:
+        try:
+            print("\n#:")
+            keyword = input().strip()
+    
+            if keyword:
+                search_data_in_folder(folder_path, keyword)
+            else:
+                print("Please enter a valid keyword.")
+        except KeyboardInterrupt:
+            print("\n\nSearch interrupted. Program ended.")
+            break
+        except Exception as e:
+            print(f"Error: {str(e)}")
+    
+    print("\nProgram ended.")
+
+if __name__ == "__main__":
+    main()
