@@ -2,6 +2,6 @@
 # 1.xlsx为单一excel表格文件名
 # E-Box为存储多个excel表格的文件夹名
 
-r'C:/Users/Administrator/Desktop/1.xlsx'
+r'C:/Users/Administrator/Desktop/B.xlsx'
 
-r'C:/Users/Administrator/Desktop/E-Box'
+r'C:/Users/Administrator/Desktop/B'
